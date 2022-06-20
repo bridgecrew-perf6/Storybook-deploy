@@ -1,0 +1,32 @@
+.animate {
+  transition: all 0.5s;
+  position: relative;
+}
+
+.main {
+  transition: margin-left .5s;
+}
+
+.isOpenSidebar {
+  width: 240px;
+  margin-left: -240px;
+
+}
+
+.isClosedSidebar {
+  width: 0px;
+  margin-left: 0px;
+  left: 240px;
+}
+
+.isOpenSidebarRight {
+  width: 320px;
+  margin-right: -320px;
+
+}
+
+.isClosedSidebarRight {
+  width: 0px;
+  margin-right: 0px;
+  right: 320px;
+}

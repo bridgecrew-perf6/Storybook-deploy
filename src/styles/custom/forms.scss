@@ -1,0 +1,53 @@
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(33, 79, 141, 0.6)!important;
+  outline: 0 none!important;
+}
+
+.form-control {
+  border-radius: 4px!important;
+  border: 1px solid hsl(0, 0%, 80%)!important;
+  height: 59px!important;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #616161;
+  font-weight: 300;
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #616161;
+  font-weight: 300;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: #616161;
+  font-weight: 300;
+}
+
+.custom-react-select {
+  span {
+    height: 40px;
+  }
+}
+
+
+button {
+  height: 59px;
+}
