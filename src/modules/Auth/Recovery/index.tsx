@@ -25,7 +25,7 @@ const Recovey = ({ token, typeUser }: PropsParent) => {
   destroySection()
 
   const {
-    register,
+    control,
     reset,
     handleSubmit,
     formState: { errors }
@@ -93,7 +93,7 @@ const Recovey = ({ token, typeUser }: PropsParent) => {
         )}
         <Form onSubmit={handleSubmit(handleData)}>
           <Input
-            register={register}
+            control={control}
             error={errors.password?.message}
             name="password"
             type="password"
@@ -101,7 +101,7 @@ const Recovey = ({ token, typeUser }: PropsParent) => {
             placeholder="Insira sua senha"
           />
           <Input
-            register={register}
+            control={control}
             error={errors.passwordConfirm?.message}
             name="passwordConfirm"
             type="password"

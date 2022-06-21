@@ -30,7 +30,7 @@ const RecepacaoRecepcao: React.FC = () => {
   })
 
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors },
     clearErrors,
@@ -138,7 +138,7 @@ const RecepacaoRecepcao: React.FC = () => {
           <Row className="d-flex align-items-end">
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 type="hidden"
                 label=""
                 placeholder={'...'}
@@ -153,7 +153,7 @@ const RecepacaoRecepcao: React.FC = () => {
             </Col>
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 type="hidden"
                 label=""
                 placeholder={'...'}
@@ -170,7 +170,7 @@ const RecepacaoRecepcao: React.FC = () => {
           <Row className="d-flex align-items-end">
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Prenotação"
                 placeholder={'...'}
@@ -180,7 +180,7 @@ const RecepacaoRecepcao: React.FC = () => {
             </Col>
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Protocolo ARISP"
                 placeholder={'...'}
@@ -190,7 +190,7 @@ const RecepacaoRecepcao: React.FC = () => {
             </Col>
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Prazo para devolucao"
                 placeholder={'...'}
@@ -202,7 +202,7 @@ const RecepacaoRecepcao: React.FC = () => {
             </Col>
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Prazo para entrega"
                 placeholder={'...'}

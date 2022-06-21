@@ -60,7 +60,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
   })
 
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors },
     clearErrors,
@@ -186,7 +186,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
           <Row className="mb-3">
             <Col xs={4}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Protocolo ARISP"
                 placeholder={'...'}
@@ -196,7 +196,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
             </Col>
             <Col xs={4}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Protocolo Indisponibilidade"
                 placeholder={'...'}
@@ -229,7 +229,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
           <Row>
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 type="hidden"
                 label=""
                 placeholder={'...'}
@@ -244,7 +244,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
             </Col>
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 type="hidden"
                 label=""
                 placeholder={'...'}
@@ -266,7 +266,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
           <Row>
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Prazo para registro"
                 placeholder={'...'}
@@ -278,7 +278,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
             </Col>
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Prazo para devolução irregular"
                 placeholder={'...'}
@@ -290,7 +290,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
             </Col>
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Prenotação válida até"
                 placeholder={'...'}
@@ -302,7 +302,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
             </Col>
             <Col xs={3}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Data da notificação"
                 placeholder={'...'}
@@ -341,7 +341,7 @@ const RecepcaoPrenotados = ({ service }: Props) => {
             </Col>
             <Col xs={4}>
               <Input
-                register={register}
+                control={control}
                 type="number"
                 label="Vias adicionais"
                 placeholder={'...'}

@@ -25,7 +25,7 @@ const Forgot = () => {
   destroySection()
 
   const {
-    register,
+    control,
     reset,
     handleSubmit,
     formState: { errors }
@@ -74,7 +74,7 @@ const Forgot = () => {
       )}
       <Form onSubmit={handleSubmit(handleData)}>
         <Input
-          register={register}
+          control={control}
           error={errors.email?.message}
           name="email"
           type="email"

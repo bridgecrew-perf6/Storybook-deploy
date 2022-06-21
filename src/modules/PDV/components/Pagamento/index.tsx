@@ -15,7 +15,7 @@ import Text from 'components/Text'
 import { PDVContext } from 'contexts/PDVContext'
 import React, { useContext, useState } from 'react'
 import { Col, Form, Row, Table } from 'react-bootstrap'
-import { FormProvider, useForm, useFormContext } from 'react-hook-form'
+import { FormProvider, useForm } from 'react-hook-form'
 import * as S from './styles'
 
 const Pagamento: React.FC = () => {
@@ -27,7 +27,7 @@ const Pagamento: React.FC = () => {
   const methods = useForm({})
 
   const {
-    register,
+    control,
     handleSubmit,
     reset,
     formState: { errors }
@@ -257,7 +257,7 @@ const Pagamento: React.FC = () => {
             </Col>
             <Col xs={4}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Valor recebido"
                 placeholder={'...'}

@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MultiStepsPDV from 'components/MultiSteps/PDV'
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Confirmacao from './components/Confirmacao'
 import Identificao from './components/Identificacao'

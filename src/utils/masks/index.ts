@@ -1,3 +1,5 @@
+import React from 'react'
+
 export function maskPostalCode(e: React.FormEvent<HTMLInputElement>) {
   e.currentTarget.maxLength = 9
   let value = e.currentTarget.value

@@ -122,7 +122,7 @@ const PdvSetNumeroRegistro = ({ label, changeInput, isTrueInput }: Props) => {
       <Row className="d-flex align-items-end">
         <Col xs={8}>
           <Input
-            register={() => ''}
+            control={() => ''}
             name={label}
             type="text"
             label={label}
