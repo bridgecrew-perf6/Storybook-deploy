@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function maskPostalCode(e: React.FormEvent<HTMLInputElement>) {
+export function maskPostalCode(e: React.FormEvent<HTMLTextAreaElement>) {
   e.currentTarget.maxLength = 9
   let value = e.currentTarget.value
   value = value.replace(/\D/g, '')
@@ -9,7 +9,7 @@ export function maskPostalCode(e: React.FormEvent<HTMLInputElement>) {
   return e
 }
 
-export function maskDateBRL(e: React.FormEvent<HTMLInputElement>) {
+export function maskDateBRL(e: React.FormEvent<HTMLTextAreaElement>) {
   e.currentTarget.maxLength = 10
   let value = e.currentTarget.value
   value = value.replace(/\D/g, '')
@@ -19,7 +19,7 @@ export function maskDateBRL(e: React.FormEvent<HTMLInputElement>) {
   return e
 }
 
-export function maskCurrencyBRL(e: React.FormEvent<HTMLInputElement>) {
+export function maskCurrencyBRL(e: React.FormEvent<HTMLTextAreaElement>) {
   let value = e.currentTarget.value
   value = value.replace(/\D/g, '')
   value = value.replace(/(\d)(\d{2})$/, '$1,$2')
@@ -28,7 +28,7 @@ export function maskCurrencyBRL(e: React.FormEvent<HTMLInputElement>) {
   return e
 }
 
-export function maskCPF(e: React.FormEvent<HTMLInputElement>) {
+export function maskCPF(e: React.FormEvent<HTMLTextAreaElement>) {
   e.currentTarget.maxLength = 14
   let value = e.currentTarget.value
   if (!value.match(/^(\d{3}).(\d{3}).(\d{3})-(\d{2})$/)) {
@@ -41,7 +41,7 @@ export function maskCPF(e: React.FormEvent<HTMLInputElement>) {
   return e
 }
 
-export function maskPhone(e: React.FormEvent<HTMLInputElement>) {
+export function maskPhone(e: React.FormEvent<HTMLTextAreaElement>) {
   e.currentTarget.maxLength = 14
   let value = e.currentTarget.value
   value = value.replace(/\D/g, '')
@@ -51,7 +51,7 @@ export function maskPhone(e: React.FormEvent<HTMLInputElement>) {
   return e
 }
 
-export function maskMobile(e: React.FormEvent<HTMLInputElement>) {
+export function maskMobile(e: React.FormEvent<HTMLTextAreaElement>) {
   e.currentTarget.maxLength = 15
   let value = e.currentTarget.value
   value = value.replace(/\D/g, '')

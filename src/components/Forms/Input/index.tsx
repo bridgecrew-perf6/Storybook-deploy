@@ -26,7 +26,7 @@ const Input: React.FC<Props> = ({
   ...rest
 }) => {
   const handleKeyUp = useCallback(
-    (e: React.FormEvent<HTMLInputElement>) => {
+    (e: React.FormEvent<HTMLTextAreaElement>) => {
       switch (mask) {
         case 'maskPostalCode':
           maskPostalCode(e)
