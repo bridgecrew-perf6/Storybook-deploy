@@ -6,13 +6,9 @@ import { Col, Form, ListGroup, Row } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 
 const TabDefault: React.FC = ({ ...rest }) => {
-  const {
-    handleSubmit,
-    formState: { errors },
-    control
-  } = useForm()
+  const { handleSubmit } = useForm()
 
-  const [loading, setLoading] = useState<boolean>(false)
+  const [, setLoading] = useState<boolean>(false)
 
   const handleData = async (data: any) => {
     try {

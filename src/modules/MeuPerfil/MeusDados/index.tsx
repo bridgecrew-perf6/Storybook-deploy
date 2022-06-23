@@ -24,7 +24,7 @@ const MeusDados = () => {
   const [updateOneCliente] = useMutation(UPDATE_USER)
 
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors },
     reset
@@ -44,6 +44,7 @@ const MeusDados = () => {
       })
     })
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const item: Props = {
       nome: data.nome,
       email: data.email,
@@ -119,7 +120,7 @@ const MeusDados = () => {
         <Row>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.nome?.message}
               name="nome"
               type="text"
@@ -131,7 +132,7 @@ const MeusDados = () => {
         <Row>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.email?.message}
               name="email"
               type="text"
@@ -143,7 +144,7 @@ const MeusDados = () => {
         <Row>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.telefone?.message}
               name="telefone"
               type="text"
@@ -154,7 +155,7 @@ const MeusDados = () => {
           </Col>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.celular?.message}
               name="celular"
               type="text"
@@ -167,7 +168,7 @@ const MeusDados = () => {
         <Row>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.cpf?.message}
               name="cpf"
               type="text"
@@ -178,7 +179,7 @@ const MeusDados = () => {
           </Col>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.rg?.message}
               name="rg"
               type="text"

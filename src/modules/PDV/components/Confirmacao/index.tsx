@@ -1,16 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import {
-  faBarcode,
-  faCreditCard,
-  faDollarSign,
-  faDonate,
-  faEdit,
-  faMoneyBillAlt,
-  faTrash,
-  faUniversity
-} from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-/* import Button from 'components/Button' */
 import PdvResumeOrder from 'components/Pdv/PdvResumeOrder'
 import Text from 'components/Text'
 import { PDVContext } from 'contexts/PDVContext'

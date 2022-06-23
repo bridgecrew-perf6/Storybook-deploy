@@ -22,7 +22,7 @@ const RecepcaoCertidao: React.FC = () => {
   })
 
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors },
     clearErrors,
@@ -81,7 +81,7 @@ const RecepcaoCertidao: React.FC = () => {
           <Row>
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Prenotação"
                 placeholder={''}
@@ -91,7 +91,7 @@ const RecepcaoCertidao: React.FC = () => {
             </Col>
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Protocolo ARISP"
                 placeholder={''}

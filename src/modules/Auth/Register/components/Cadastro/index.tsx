@@ -31,7 +31,7 @@ const Cadastro = ({
   const [updateOneCliente] = useMutation(UPDATE_CUSTOMER)
 
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors },
     reset,
@@ -171,7 +171,7 @@ const Cadastro = ({
           <Row>
             <Col xs={7}>
               <Input
-                register={register}
+                control={control}
                 error={errors.nome?.message}
                 name="nome"
                 type="text"
@@ -181,7 +181,7 @@ const Cadastro = ({
             </Col>
             <Col xs={5}>
               <Input
-                register={register}
+                control={control}
                 error={errors.cpf?.message}
                 name="cpf"
                 type="text"
@@ -194,7 +194,7 @@ const Cadastro = ({
           <Row>
             <Col xs={7}>
               <Input
-                register={register}
+                control={control}
                 error={errors.email?.message}
                 name="email"
                 type="text"
@@ -204,7 +204,7 @@ const Cadastro = ({
             </Col>
             <Col xs={5}>
               <Input
-                register={register}
+                control={control}
                 error={errors.rg?.message}
                 name="rg"
                 type="text"
@@ -216,7 +216,7 @@ const Cadastro = ({
           <Row>
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 error={errors.celular?.message}
                 name="celular"
                 type="text"
@@ -227,7 +227,7 @@ const Cadastro = ({
             </Col>
             <Col xs={6}>
               <Input
-                register={register}
+                control={control}
                 error={errors.telefone?.message}
                 name="telefone"
                 type="text"

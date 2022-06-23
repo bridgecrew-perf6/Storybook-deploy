@@ -10,7 +10,7 @@ import { Props } from './interface'
 
 const Nome = ({ id, idFather, downTicket, upTicket, permitedDown }: Props) => {
   const {
-    register,
+    control,
     formState: { errors }
   } = useFormContext()
 
@@ -40,7 +40,7 @@ const Nome = ({ id, idFather, downTicket, upTicket, permitedDown }: Props) => {
       <Row>
         <Col xs={12}>
           <Input
-            register={register}
+            control={control}
             type="text"
             label="Proprietário"
             placeholder={'...'}
@@ -56,7 +56,7 @@ const Nome = ({ id, idFather, downTicket, upTicket, permitedDown }: Props) => {
         <Row>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="RG"
               placeholder={'...'}
@@ -66,7 +66,7 @@ const Nome = ({ id, idFather, downTicket, upTicket, permitedDown }: Props) => {
           </Col>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="CPF"
               placeholder={'...'}
@@ -83,7 +83,7 @@ const Nome = ({ id, idFather, downTicket, upTicket, permitedDown }: Props) => {
         <Row>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Inscrição Estadual"
               placeholder={'...'}
@@ -96,7 +96,7 @@ const Nome = ({ id, idFather, downTicket, upTicket, permitedDown }: Props) => {
           </Col>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="CNPJ"
               placeholder={'...'}
@@ -112,7 +112,7 @@ const Nome = ({ id, idFather, downTicket, upTicket, permitedDown }: Props) => {
         <Col xs={7} />
         <Col xs={3}>
           <Input
-            register={register}
+            control={control}
             type="number"
             label="Vias"
             placeholder={'...'}

@@ -10,24 +10,23 @@ import {
   maskPostalCode
 } from '../../../utils/masks'
 import { Props } from './interface'
+import { Controller } from 'react-hook-form'
 
 const Input: React.FC<Props> = ({
   name,
   type = 'text',
   label,
   placeholder = 'Preencha esse campo',
-  register,
   disabled = false,
+  control,
   error,
   size = 'lg',
   textarea = false,
-  onChange = null,
-  value = null,
-  mask,
+  mask = 'default',
   ...rest
 }) => {
   const handleKeyUp = useCallback(
-    (e: React.FormEvent<HTMLInputElement>) => {
+    (e: React.FormEvent<HTMLTextAreaElement>) => {
       switch (mask) {
         case 'maskPostalCode':
           maskPostalCode(e)
@@ -63,20 +62,26 @@ const Input: React.FC<Props> = ({
         weight={500}
         className="pb-1 pt-3"
       />
-      <Form.Control
-        {...register(name)}
+      <Controller
+        control={control}
         name={name}
-        type={type}
-        onChange={onChange}
-        placeholder={placeholder}
-        size={size}
-        className={error ? 'invalidForm' : ''}
-        disabled={disabled}
-        onKeyUp={handleKeyUp}
-        as={textarea ? 'textarea' : undefined}
-        rows={textarea ? 3 : 1}
-        value={value}
-        {...rest}
+        render={({ field: { onChange, onBlur, value, ref } }) => (
+          <Form.Control
+            type={type}
+            onChange={onChange}
+            onBlur={onBlur}
+            placeholder={placeholder}
+            size={size}
+            className={error ? 'invalidForm' : ''}
+            disabled={disabled}
+            ref={ref}
+            onKeyUp={handleKeyUp}
+            as={textarea ? 'textarea' : undefined}
+            rows={textarea ? 3 : 1}
+            value={value}
+            {...rest}
+          />
+        )}
       />
       {error && (
         <Text

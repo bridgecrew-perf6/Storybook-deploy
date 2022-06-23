@@ -27,7 +27,7 @@ const Pagamento: React.FC = () => {
   const methods = useForm({})
 
   const {
-    register,
+    control,
     handleSubmit,
     reset,
     formState: { errors }
@@ -257,7 +257,7 @@ const Pagamento: React.FC = () => {
             </Col>
             <Col xs={4}>
               <Input
-                register={register}
+                control={control}
                 type="text"
                 label="Valor recebido"
                 placeholder={'...'}

@@ -24,8 +24,8 @@ const Login = () => {
   destroySection()
 
   const {
-    register,
     handleSubmit,
+    control,
     formState: { errors }
   } = useForm({
     resolver: yupResolver(validatorSchema),
@@ -79,7 +79,7 @@ const Login = () => {
         )}
       <Form onSubmit={handleSubmit(handleData)}>
         <Input
-          register={register}
+          control={control}
           error={errors.email?.message}
           name="email"
           type="email"
@@ -87,7 +87,7 @@ const Login = () => {
           placeholder="Insira seu e-mail"
         />
         <Input
-          register={register}
+          control={control}
           error={errors.password?.message}
           name="password"
           type="password"
