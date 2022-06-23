@@ -10,7 +10,7 @@ const Badge: React.FC<Props> = ({
   variant,
   icon = 'check',
   hideIcon = false,
-  size = 'lg'
+/*   size = 'lg' */
 }) => {
   const renderIcon = (value: string) => {
     switch (value) {
@@ -23,7 +23,6 @@ const Badge: React.FC<Props> = ({
 
   return (
     <BadgeCustom id={id} variant={variant}>
-      {console.log(size)}
       {hideIcon && renderIcon(icon)} {label}
     </BadgeCustom>
   )

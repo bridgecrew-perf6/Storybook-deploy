@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Input from 'components/Forms/Input'
 import Select from 'components/Forms/Select'
 import React, { useState } from 'react'

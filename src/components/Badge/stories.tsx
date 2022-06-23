@@ -43,8 +43,26 @@ export default {
         type: { summary: 'descrição do alerta' },
         defaultValue: { summary: 'Descrição de utilização' }
       }
+    },
+    hideIcon: {
+      defaultValue: 'Descrição de utilização',
+      options: [true, false],
+      control: { type: 'radio', defaultStatus: true },
+      table: {
+        type: { summary: 'descrição do icone' },
+        defaultValue: { summary: true }
+      }
     }
+     /*    size: {
+      defaultValue: 'Descrição de utilização',
+      options: ['lg', 'md', 'sm'],
+      control: { type: 'radio', defaultStatus: 'lg' },
+      table: {
+        type: { summary: 'descrição dos tamanhos' },
+        defaultValue: { summary: 'Descrição de utilização' }
+      }
+    } */
   }
 }
-const Template = (args: never) => <Badge {...args} />
+const Template = (args: any) => <Badge {...args} />
 export const Default = Template.bind({})

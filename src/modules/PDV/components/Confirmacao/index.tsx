@@ -8,10 +8,8 @@ import { Col, Image, Row, Table } from 'react-bootstrap'
 import * as S from './styles'
 
 const Confirmacao: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { order, handleStep } = useContext(PDVContext)
+  const { order } = useContext(PDVContext)
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [resumeFinance, _setResumeFinance] = useState([])
 
   const loadCart = () => {

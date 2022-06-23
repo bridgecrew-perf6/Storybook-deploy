@@ -1,11 +1,11 @@
-import Text from 'components/Text'
+import Text from '../../Text'
 import React from 'react'
-import { Controller, useFormContext } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import ReactSelect, { components } from 'react-select'
 import { Props } from './interface'
 
 const Select = ({ name, label, defaultValue, isInvalid, ...rest }: Props) => {
-  const { control } = useFormContext()
+  const { control } = useForm({})
 
   const NoOptionsMessage = (props: any | unknown) => {
     return (
@@ -26,6 +26,7 @@ const Select = ({ name, label, defaultValue, isInvalid, ...rest }: Props) => {
       />
       <Controller
         name={name}
+        control={control}
         render={({ field }) => (
           <ReactSelect
             {...field}
@@ -38,7 +39,6 @@ const Select = ({ name, label, defaultValue, isInvalid, ...rest }: Props) => {
             components={{ NoOptionsMessage }}
           />
         )}
-        control={control}
         defaultValue={defaultValue}
       />
       {isInvalid && (

@@ -1,14 +1,14 @@
 import React from 'react'
-import Alert from '.'
+import AccordionTitleColor from '.'
 
 
 export default {
-  title: 'Alert',
-  component: Alert,
+  title: 'AccordionTitleColor',
+  component: AccordionTitleColor,
   parameters: {
     docs: {
       description: {
-        component: 'A simple alert component'
+        component: 'A simple Title component'
       }
     }
   },
@@ -20,7 +20,7 @@ export default {
         defaultValue: { summary: 'alert-success' }
       }
     },
-    variant: {
+    color: {
       defaultValue: 'success',
       options: ['success', 'warning', 'info', 'danger'],
       control: { type: 'radio', defaultStatus: 'success' },
@@ -35,8 +35,15 @@ export default {
         type: { summary: 'descrição do alerta' },
         defaultValue: { summary: 'Transação realizada com sucesso!' }
       }
+    },
+     count: {
+      defaultValue: 4,
+      table: {
+        type: { summary: 'descrição do alerta' },
+        defaultValue: { summary: 4 }
+      }
     }
   }
 }
-const Template = (args: any) => <Alert {...args} />
+const Template = (args: any) => <AccordionTitleColor {...args} />
 export const Default = Template.bind({})

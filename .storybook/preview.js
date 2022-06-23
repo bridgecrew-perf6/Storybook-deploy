@@ -1,15 +1,24 @@
-import { addDecorator } from '@storybook/react'
-import { withNextRouter } from 'storybook-addon-next-router'
-import '../.next/static/css/fefc71a46f50c686da45.css'
-import GlobalStyles from '../src/styles/global'
+import 'bootstrap/dist/css/bootstrap.css'
+import { ThemeProvider } from 'styled-components'
+import theme from '/src/styles/theme'
+import '/src/styles/bootstrap.scss'
 
-addDecorator(withNextRouter())
+export const parameters = {
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/
+    }
+  }
+}
 
 export const decorators = [
   (Story) => (
     <>
-      <GlobalStyles />
-      <Story />
+      <ThemeProvider theme={theme.dark}>
+        <Story />
+      </ThemeProvider>
     </>
   )
 ]

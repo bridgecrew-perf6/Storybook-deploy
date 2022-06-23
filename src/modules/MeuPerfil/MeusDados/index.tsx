@@ -53,6 +53,7 @@ const MeusDados = () => {
       celular: formatMobile(data.celular),
       telefone: formatPhone(data.telefone)
     }
+    console.log(item)
 
     reset()
   }, [userId, reset])

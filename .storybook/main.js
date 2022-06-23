@@ -1,15 +1,17 @@
 module.exports = {
-  stories: ['../src/components/**/stories.tsx'],
-  addons: ['@storybook/addon-essentials'],
-  babel: async (options) => ({
-    ...options,
-    plugins: [
-      ...options.plugins,
-      require.resolve('@babel/plugin-transform-react-jsx')
-    ]
-  }),
-  webpackFinal: (config) => {
-    config.resolve.modules.push(`${process.cwd()}/src`)
-    return config
+  stories: [
+    '../src/**/*.stories.mdx',
+    '../src/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/components/**/stories.tsx'
+  ],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/preset-scss'
+  ],
+  framework: '@storybook/react',
+  core: {
+    builder: '@storybook/builder-webpack5'
   }
 }
