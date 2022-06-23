@@ -24,8 +24,17 @@ export default {
       options: ['success', 'secondary', 'danger'],
       control: { type: 'radio', defaultStatus: 'success' },
       table: {
-        type: { summary: 'tipos de botões' },
+        type: { summary: 'tipos de variantes do botão' },
         defaultValue: { summary: 'success' }
+      }
+    },
+    type: {
+      defaultValue: 'button',
+      options: ['button' , 'reset' , 'submit' ],
+      control: { type: 'radio', defaultStatus: 'button' },
+      table: {
+        type: { summary: 'tipos de botões' },
+        defaultValue: { summary: 'button' }
       }
     },
     label: {
@@ -37,5 +46,8 @@ export default {
     }
   }
 }
-const Template = (args: never) => <Button {...args} />
+const Template = (args: any) => <Button {...args} />
 export const Default = Template.bind({})
+
+
+

@@ -1,4 +1,8 @@
-import { StatusType } from 'contexts/PdvOrderContext/interfaceTypes'
+import {
+  StatusType,
+  StepNameType
+} from 'contexts/PdvOrderContext/interfaceTypes'
+
 import { ReactNode } from 'react'
 
 export interface Props {
@@ -6,7 +10,7 @@ export interface Props {
 }
 
 export interface ItemProps {
-  name: string
+  name: StepNameType
   component: ReactNode
   icon: ReactNode
   status: StatusType

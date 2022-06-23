@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   faBarcode,
   faCreditCard,
@@ -9,7 +10,7 @@ import {
   faUniversity
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Button from 'components/Button'
+/* import Button from 'components/Button' */
 import PdvResumeOrder from 'components/Pdv/PdvResumeOrder'
 import Text from 'components/Text'
 import { PDVContext } from 'contexts/PDVContext'
@@ -18,9 +19,8 @@ import { Col, Image, Row, Table } from 'react-bootstrap'
 import * as S from './styles'
 
 const Confirmacao: React.FC = () => {
-  const { order, handleStep } = useContext(PDVContext)
+  const { order } = useContext(PDVContext)
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [resumeFinance, _setResumeFinance] = useState([])
 
   const loadCart = () => {

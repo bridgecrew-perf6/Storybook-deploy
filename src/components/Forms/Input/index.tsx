@@ -1,4 +1,4 @@
-import Text from 'components/Text'
+import Text from '../../Text'
 import React, { useCallback } from 'react'
 import { Form } from 'react-bootstrap'
 import {
@@ -8,7 +8,7 @@ import {
   maskMobile,
   maskPhone,
   maskPostalCode
-} from 'utils/masks'
+} from '../../../utils/masks'
 import { Props } from './interface'
 
 const Input: React.FC<Props> = ({

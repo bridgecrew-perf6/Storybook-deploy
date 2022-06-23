@@ -1,3 +1,5 @@
+import {sizes} from './sizes'
+
 export default {
   colors: {
     white: '#ffffff',
@@ -26,5 +28,6 @@ export default {
     'gray-700': '#464E5F',
     'gray-800': '#1B283F',
     'gray-900': '#212121'
-  }
+  },
+  sizes:{...sizes}
 }

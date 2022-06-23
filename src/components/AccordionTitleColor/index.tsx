@@ -1,6 +1,6 @@
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Text from 'components/Text'
+import Text from '../Text'
 import React, { useState } from 'react'
 import { Badge as BadgeCustom } from 'react-bootstrap'
 import { Props } from './interface'

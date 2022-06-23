@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Badge from 'components/Badge'
 import Text from 'components/Text'
 import React, { useState } from 'react'
 import { Col, Form, ListGroup, Row } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TabDefault: React.FC = ({ ...rest }) => {
   const {
     handleSubmit,
@@ -12,7 +12,6 @@ const TabDefault: React.FC = ({ ...rest }) => {
     control
   } = useForm()
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState<boolean>(false)
 
   const handleData = async (data: any) => {

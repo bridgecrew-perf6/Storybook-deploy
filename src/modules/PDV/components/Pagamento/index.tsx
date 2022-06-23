@@ -15,7 +15,7 @@ import Text from 'components/Text'
 import { PDVContext } from 'contexts/PDVContext'
 import React, { useContext, useState } from 'react'
 import { Col, Form, Row, Table } from 'react-bootstrap'
-import { FormProvider, useForm, useFormContext } from 'react-hook-form'
+import { FormProvider, useForm } from 'react-hook-form'
 import * as S from './styles'
 
 const Pagamento: React.FC = () => {

@@ -4,8 +4,8 @@ import {
   faTimes
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { PdvOrderContext } from 'contexts/PdvOrderContext'
-import { StepNameType } from 'contexts/PdvOrderContext/interfaceTypes'
+import { PdvOrderContext } from '../../../contexts/PdvOrderContext'
+import { StepNameType } from '../../../contexts/PdvOrderContext/interfaceTypes'
 import React, { useContext, useEffect, useState } from 'react'
 import { Col, ProgressBar, Row } from 'react-bootstrap'
 import { Props, StepsProps } from './interface'

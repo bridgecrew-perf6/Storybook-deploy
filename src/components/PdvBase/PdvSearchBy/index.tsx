@@ -22,7 +22,7 @@ const PdvSearchBy: React.FC<Props> = ({ type }) => {
     formState: { errors }
   } = useFormContext()
 
-  const [pesquisarPor, setPesquisarPor] = useState({
+  const [, /* pesquisarPor */ setPesquisarPor] = useState({
     value: 'Matrícula',
     label: 'Matrícula'
   })
@@ -58,6 +58,7 @@ const PdvSearchBy: React.FC<Props> = ({ type }) => {
     )
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleSearch = (e: any) => {
     setPesquisarPor({
       value: e.value,

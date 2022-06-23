@@ -8,12 +8,12 @@ import {
   faUniversity
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Button from 'components/Button'
-import Text from 'components/Text'
+import Button from '../../../components/Button'
+import Text from '../../../components/Text'
 import { Col, Row } from 'react-bootstrap'
 import { Props } from './interface'
 import * as S from './styles'
-import { PDVContext } from 'contexts/PDVContext'
+import { PDVContext } from '../../../contexts/PDVContext'
 
 const PdvResumeOrder = ({
   titleNextStep,
@@ -30,9 +30,11 @@ const PdvResumeOrder = ({
   useEffect(() => {
     console.log(order)
     let price = 0
-    order.map((elm: any) => {
-      price += elm?.data?.valorTotal
-    })
+    {order && (
+      order.map((elm: any) => {
+        price += elm?.data?.valorTotal
+      })
+    )}
     setServicos(price)
     setFaltante(price - prices.descontos)
     setTotalGeral(price - prices.descontos)
@@ -120,6 +122,7 @@ const PdvResumeOrder = ({
             />
           </Col>
           <Col className="text-right  border-bottom  pt-2 pb-2 pl-0">
+            {item.data.valorTotal && (
             <Text
               label={`${item.data.valorTotal.toLocaleString('pt-br', {
                 style: 'currency',
@@ -129,6 +132,7 @@ const PdvResumeOrder = ({
               size="regular"
               weight={300}
             />
+            )}
           </Col>
         </Row>
       ))}
@@ -137,6 +141,7 @@ const PdvResumeOrder = ({
           <Text label="Descontos" color="warning" size="regular" weight={300} />
         </Col>
         <Col className="text-right  border-bottom  pt-2 pb-2 pl-0">
+          {prices.descontos && (
           <Text
             label={`${prices.descontos.toLocaleString('pt-br', {
               style: 'currency',
@@ -146,6 +151,7 @@ const PdvResumeOrder = ({
             size="regular"
             weight={300}
           />
+          )}
         </Col>
       </Row>
       {payment?.map((item: any, index: number) => (

@@ -4,5 +4,5 @@ export interface Props {
   variant: string
   icon?: string
   hideIcon?: boolean
-  size?: string
+ /*  size?: string */
 }

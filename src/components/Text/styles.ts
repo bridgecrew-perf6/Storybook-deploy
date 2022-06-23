@@ -3,6 +3,7 @@ import { CssProps } from './interface'
 
 export const Text = styled.text<CssProps>`
   ${({ size, weight, color }) => {
+
     return css`
       display: block;
       color: ${(props) =>
