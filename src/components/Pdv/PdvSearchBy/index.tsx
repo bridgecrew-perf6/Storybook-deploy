@@ -57,7 +57,7 @@ const PdvSearchBy: React.FC<Props> = ({ type }) => {
       </Row>
     )
   }
-
+  // TODO: Verificar a utilização
   // const handleSearch = (e: any) => {
   //   setPesquisarPor({
   //     value: e.value,
