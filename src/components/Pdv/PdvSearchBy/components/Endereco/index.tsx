@@ -21,7 +21,7 @@ const Endereco = ({
   permitedDown
 }: Props) => {
   const {
-    register,
+    control,
     formState: { errors }
   } = useFormContext()
 
@@ -50,7 +50,7 @@ const Endereco = ({
       <Row>
         <Col xs={3}>
           <Input
-            register={register}
+            control={control}
             type="text"
             label="Código Postal - CEP"
             placeholder={'...'}
@@ -98,7 +98,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={7}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Endereço"
               placeholder={'...'}
@@ -122,7 +122,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={2}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Número"
               placeholder={'...'}
@@ -146,7 +146,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={12}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Complemento"
               placeholder={'...'}
@@ -167,7 +167,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={12}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Edifício"
               placeholder={'...'}
@@ -184,7 +184,7 @@ const Endereco = ({
         {['Conjunto - 02'].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Conjunto"
               placeholder={'...'}
@@ -199,7 +199,7 @@ const Endereco = ({
         {['Escritório - 04'].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Escritório"
               placeholder={'...'}
@@ -214,7 +214,7 @@ const Endereco = ({
         {['Loja - 05'].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Loja"
               placeholder={'...'}
@@ -228,7 +228,7 @@ const Endereco = ({
         {['Apartamento - 01'].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Apartamento"
               placeholder={'...'}
@@ -248,7 +248,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Bloco"
               placeholder={'...'}
@@ -269,7 +269,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Vaga"
               placeholder={'...'}
@@ -285,7 +285,7 @@ const Endereco = ({
         {['Lote - 06', 'Terreno - 07'].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Loteamento"
               placeholder={'...'}
@@ -300,7 +300,7 @@ const Endereco = ({
         {['Lote - 06', 'Terreno - 07'].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Quadra"
               placeholder={'...'}
@@ -315,7 +315,7 @@ const Endereco = ({
         {['Lote - 06', 'Terreno - 07'].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Lote"
               placeholder={'...'}
@@ -341,7 +341,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={5}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Bairro"
               placeholder={'...'}
@@ -365,7 +365,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Cidade"
               placeholder={'...'}
@@ -390,7 +390,7 @@ const Endereco = ({
         ].includes(defaultTypeAddress) && (
           <Col xs={2}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="UF"
               value="SP"
@@ -409,7 +409,7 @@ const Endereco = ({
         <Col xs={7} />
         <Col xs={3}>
           <Input
-            register={register}
+            control={control}
             type="number"
             label="Vias"
             placeholder={'...'}

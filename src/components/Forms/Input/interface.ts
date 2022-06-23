@@ -1,14 +1,16 @@
+import { Control } from 'react-hook-form'
+
 export interface Props {
   name: string
   label: string
   placeholder: string
+  control: Control
   type: string
-  size?: string
+  size?: 'lg' | 'sm'
   weight?: 300 | 500 | 700 | 800 | number
   color?: string
   className?: string
   disabled?: boolean
-  register: any
   textarea?: boolean
   error?: ErrorProps
   onChange?: any

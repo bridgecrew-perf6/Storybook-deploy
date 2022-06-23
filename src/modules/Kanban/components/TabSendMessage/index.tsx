@@ -10,7 +10,7 @@ import { validatorSchema } from './validatorSchema'
 const TabSendMessage: React.FC = ({ ...rest }) => {
   console.log(rest)
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors }
   } = useForm({
@@ -36,7 +36,7 @@ const TabSendMessage: React.FC = ({ ...rest }) => {
       <Row>
         <Col xs={9}>
           <Input
-            register={register}
+            control={control}
             error={errors.phase?.message}
             name="phase"
             type="text"

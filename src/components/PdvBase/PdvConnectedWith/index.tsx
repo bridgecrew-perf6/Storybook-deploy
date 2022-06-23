@@ -13,7 +13,7 @@ const PdvConnectedWith = () => {
   const [isTrue, setIsTrue] = useState<boolean>(false)
   const [itemNumero, setItemNumero] = useState<number>(1)
   const {
-    register,
+    control,
     formState: { errors }
   } = useFormContext()
   const updateSelect = (e: any) => {
@@ -68,7 +68,7 @@ const PdvConnectedWith = () => {
       <Row>
         <Col>
           <Input
-            register={register}
+            control={control}
             type="number"
             label=""
             value={itemNumero}

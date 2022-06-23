@@ -18,11 +18,11 @@ import { BaseProps, Props } from './interface'
 
 const PdvSearchBy: React.FC<Props> = ({ type }) => {
   const {
-    register,
+    control,
     formState: { errors }
   } = useFormContext()
 
-  const [pesquisarPor, setPesquisarPor] = useState({
+  const [, setPesquisarPor] = useState({
     value: 'Matrícula',
     label: 'Matrícula'
   })
@@ -46,7 +46,7 @@ const PdvSearchBy: React.FC<Props> = ({ type }) => {
       <Row>
         <Col className={'pr-0'}>
           <Input
-            register={register}
+            control={control}
             type="text"
             label="Observações"
             placeholder={'...'}
@@ -57,26 +57,26 @@ const PdvSearchBy: React.FC<Props> = ({ type }) => {
       </Row>
     )
   }
-
-  const handleSearch = (e: any) => {
-    setPesquisarPor({
-      value: e.value,
-      label: e.value
-    })
-
-    tickets.data = [
-      {
-        tipo: e.value,
-        vias: 1,
-        numero: null,
-        dataNome: [],
-        dataEndereco: [],
-        dataRegistro: [DATA_CLEAR_REGISTRO]
-      }
-    ]
-
-    setTickets({ ...tickets })
-  }
+  // TODO: Verificar a utilização
+  // const handleSearch = (e: any) => {
+  //   setPesquisarPor({
+  //     value: e.value,
+  //     label: e.value
+  //   })
+  //
+  //   tickets.data = [
+  //     {
+  //       tipo: e.value,
+  //       vias: 1,
+  //       numero: null,
+  //       dataNome: [],
+  //       dataEndereco: [],
+  //       dataRegistro: [DATA_CLEAR_REGISTRO]
+  //     }
+  //   ]
+  //
+  //   setTickets({ ...tickets })
+  // }
 
   const handleDown = (index: number, idFather: number) => {
     const dataTipo: string = tickets.data[0].tipo

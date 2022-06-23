@@ -10,7 +10,7 @@ import { validatorSchema } from './validatorSchema'
 
 const AlterarSenha = () => {
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors }
   } = useForm({
@@ -46,7 +46,7 @@ const AlterarSenha = () => {
         <Row>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.oldPassword?.message}
               name="oldPassword"
               type="text"
@@ -56,7 +56,7 @@ const AlterarSenha = () => {
           </Col>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.password?.message}
               name="password"
               type="password"
@@ -66,7 +66,7 @@ const AlterarSenha = () => {
           </Col>
           <Col>
             <Input
-              register={register}
+              control={control}
               error={errors.passwordConfirm?.message}
               name="passwordConfirm"
               type="password"
