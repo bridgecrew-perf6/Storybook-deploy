@@ -17,7 +17,7 @@ const Registros = ({
   permitedDown = true
 }: Props) => {
   const {
-    register,
+    control,
     formState: { errors }
   } = useFormContext()
 
@@ -56,7 +56,7 @@ const Registros = ({
           className={`  ${base === 'Certidão' ? 'd-block' : 'd-none'}`}
         >
           <Input
-            register={register}
+            control={control}
             type="number"
             label="Vias"
             placeholder={'...'}
@@ -92,7 +92,7 @@ const Registros = ({
       <Row>
         <Col>
           <Input
-            register={register}
+            control={control}
             type="number"
             label=""
             value={itemNumero}

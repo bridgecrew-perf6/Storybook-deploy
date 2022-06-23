@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form'
 import * as S from './styles'
 
 const DevolucaoExameCalculo: React.FC = () => {
-  const { control, register } = useForm({})
+  const { control } = useForm({})
 
   const handleMatricula = () => {
     return (
@@ -221,7 +221,7 @@ const DevolucaoExameCalculo: React.FC = () => {
         <Row>
           <Col xs={12}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Proprietário"
               placeholder={'...'}
@@ -232,7 +232,7 @@ const DevolucaoExameCalculo: React.FC = () => {
         <Row>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="RG"
               placeholder={'...'}
@@ -241,7 +241,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="CPF"
               placeholder={'...'}
@@ -253,7 +253,7 @@ const DevolucaoExameCalculo: React.FC = () => {
         <Row>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Inscrição Estadual"
               placeholder={'...'}
@@ -262,7 +262,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={6}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="CNPJ"
               placeholder={'...'}
@@ -377,7 +377,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={7}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Proprietário"
               placeholder={'...'}
@@ -386,7 +386,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={2}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Número"
               placeholder={'...'}
@@ -395,7 +395,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={12}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Complemento"
               placeholder={'...'}
@@ -406,7 +406,7 @@ const DevolucaoExameCalculo: React.FC = () => {
         <Row>
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Apartamento número"
               placeholder={'...'}
@@ -415,7 +415,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Edifício - Bloco ou Torre"
               placeholder={'...'}
@@ -424,7 +424,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Vaga"
               placeholder={'...'}
@@ -435,7 +435,7 @@ const DevolucaoExameCalculo: React.FC = () => {
         <Row>
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="N° ou Nome do Loteamento"
               placeholder={'...'}
@@ -444,7 +444,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Quadra"
               placeholder={'...'}
@@ -453,7 +453,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={4}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Lote"
               placeholder={'...'}
@@ -464,7 +464,7 @@ const DevolucaoExameCalculo: React.FC = () => {
         <Row>
           <Col xs={9}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="N° Contribuinte (IPTU)"
               placeholder={'...'}
@@ -473,7 +473,7 @@ const DevolucaoExameCalculo: React.FC = () => {
           </Col>
           <Col xs={3}>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Código Postal - CEP"
               placeholder={'...'}
@@ -485,7 +485,7 @@ const DevolucaoExameCalculo: React.FC = () => {
         <Row>
           <Col>
             <Input
-              register={register}
+              control={control}
               type="text"
               label="Observações"
               placeholder={'...'}
@@ -555,7 +555,7 @@ const DevolucaoExameCalculo: React.FC = () => {
       <Row>
         <Col className={'pr-0'}>
           <Input
-            register={register}
+            control={control}
             type="text"
             label="Observações"
             placeholder={'...'}

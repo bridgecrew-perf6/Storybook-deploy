@@ -6,14 +6,9 @@ import { useForm } from 'react-hook-form'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TabDefault: React.FC = ({ ...rest }) => {
-  const {
-    handleSubmit,
-    formState: { errors },
-    control
-  } = useForm()
+  const { handleSubmit } = useForm()
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [loading, setLoading] = useState<boolean>(false)
+  const [, setLoading] = useState<boolean>(false)
 
   const handleData = async (data: any) => {
     try {

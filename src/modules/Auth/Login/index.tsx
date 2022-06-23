@@ -7,7 +7,7 @@ import Text from 'components/Text'
 import { AuthContext } from 'contexts/AuthContext'
 import Link from 'next/link'
 import React, { useContext, useEffect, useState } from 'react'
-import { Form, Table } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 import { LOGIN_USUARIO } from './gql'
 import { Props } from './interface'
@@ -24,8 +24,8 @@ const Login = () => {
   destroySection()
 
   const {
-    register,
     handleSubmit,
+    control,
     formState: { errors }
   } = useForm({
     resolver: yupResolver(validatorSchema),
@@ -79,7 +79,7 @@ const Login = () => {
         )}
       <Form onSubmit={handleSubmit(handleData)}>
         <Input
-          register={register}
+          control={control}
           error={errors.email?.message}
           name="email"
           type="email"
@@ -87,7 +87,7 @@ const Login = () => {
           placeholder="Insira seu e-mail"
         />
         <Input
-          register={register}
+          control={control}
           error={errors.password?.message}
           name="password"
           type="password"
