@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../public/img/logo-tecnocart.png" width="200" />
+  <img src="./images/logo.svg" width="200" />
 </p>
 
 <h1 align="center">
