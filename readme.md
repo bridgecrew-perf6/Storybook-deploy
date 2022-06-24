@@ -8,7 +8,7 @@
 
 Isolamento dos componentes comuns da aplicação.
 
-🚧 **Equipe de desemvolvimento NextCard** 🚧
+🚧 **Equipe de desenvolvimento NextCard** 🚧
 
 ## Layout
 
