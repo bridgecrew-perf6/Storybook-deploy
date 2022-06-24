@@ -1,4 +1,5 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
 import Input from '.'
 
 export default {
@@ -31,6 +32,13 @@ export default {
       defaultValue: (e: any) => {
         e
       },
+      table: {
+        type: { summary: 'descrição do botão' },
+        defaultValue: { summary: 'Cadastrar' }
+      }
+    },
+    control: {
+      disabled: true,
       table: {
         type: { summary: 'descrição do botão' },
         defaultValue: { summary: 'Cadastrar' }
@@ -91,5 +99,8 @@ export default {
     }
   }
 }
-const Template = (args: any) => <Input {...args} />
+const Template = (args: any) => {
+  const { control } = useForm({})
+  return <Input {...args} control={control} />
+}
 export const Default = Template.bind({})
